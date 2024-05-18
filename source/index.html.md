@@ -25,11 +25,12 @@ POST /data_peaks/detect/
 
 #### Parameters
 
-Content-Disposition: attachment; filename="data.csv"
-Content-Type: text/csv
 {
-  window_size: 1,
-  threshold: 1
+  @original_filename="Data points.csv",
+  @content_type="text/csv",
+  @headers="Content-Disposition: form-data;,
+  "window_size"=>"1",
+  "threshold"=>"1"
 }
 
 
