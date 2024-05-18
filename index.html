@@ -284,7 +284,7 @@
     </style>
     <link href="stylesheets/screen-c9d8fa83.css" rel="stylesheet" media="screen" />
     <link href="stylesheets/print-953e3353.css" rel="stylesheet" media="print" />
-      <script src="javascripts/all-b12a2749.js"></script>
+      <script src="javascripts/all_nosearch-18c3ed8e.js"></script>
 
     <script>
       $(function() { setupCodeCopy(); });
@@ -303,16 +303,12 @@
         <div class="lang-selector">
               <a href="#" data-language-name="ruby">ruby</a>
         </div>
-        <div class="search">
-          <input type="text" class="search" id="input-search" placeholder="Search">
-        </div>
-        <ul class="search-results"></ul>
       <ul id="toc" class="toc-list-h1">
           <li>
-            <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
+            <a href="#detect-data-peaks" class="toc-h1 toc-link" data-title="Detect Data peaks">Detect Data peaks</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#sign-up-using-username-email-password" class="toc-h2 toc-link" data-title="Sign up using username/email/password">Sign up using username/email/password</a>
+                    <a href="#detect" class="toc-h2 toc-link" data-title="Detect">Detect</a>
                   </li>
               </ul>
           </li>
@@ -321,33 +317,18 @@
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
-        <h1 id='authentication'>Authentication</h1>
-<p>Authentication endpoints</p>
-<h2 id='sign-up-using-username-email-password'>Sign up using username/email/password</h2><h3 id='request'>Request</h3><h4 id='endpoint'>Endpoint</h4><div class="highlight"><pre class="highlight plaintext tab-plaintext"><code>POST /api/v3/sign_up/
-Content-Type: application/vnd.api+json
+        <h1 id='detect-data-peaks'>Detect Data peaks</h1>
+<p>Detecting data peaks in data</p>
+<h2 id='detect'>Detect</h2><h3 id='request'>Request</h3><h4 id='endpoint'>Endpoint</h4><div class="highlight"><pre class="highlight plaintext tab-plaintext"><code>POST /data_peaks/detect/
 </code></pre></div>
-<p><code>POST /api/v3/sign_up/</code></p>
-<h4 id='parameters'>Parameters</h4><div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="nl">"data"</span><span class="p">:{</span><span class="nl">"attributes"</span><span class="p">:{</span><span class="nl">"email"</span><span class="p">:</span><span class="s2">"curt_hirthe@oberbrunner.io"</span><span class="p">,</span><span class="nl">"password"</span><span class="p">:</span><span class="s2">"testPassword"</span><span class="p">,</span><span class="nl">"username"</span><span class="p">:</span><span class="s2">"Wyatt Nitzsche"</span><span class="p">},</span><span class="nl">"type"</span><span class="p">:</span><span class="s2">"user"</span><span class="p">}}</span><span class="w">
-</span></code></pre></div>
-<p>None known.</p>
+<p><code>POST /data_peaks/detect/</code></p>
+<h4 id='parameters'>Parameters</h4>
+<p>Content-Disposition: attachment; filename=&quot;data.csv&quot;
+Content-Type: text/csv</p>
 <h3 id='response'>Response</h3><div class="highlight"><pre class="highlight plaintext tab-plaintext"><code>Content-Type: application/json; charset=utf-8
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiYjMyODNjYmQtYzQzMS00ODU1LWFlZGUtOGNmZWUwYzFjMzNmIiwic3ViIjoiNTUiLCJzY3AiOiJ1c2VyIiwiYXVkIjpudWxsLCJpYXQiOjE2NzUwNzc3MjQsImV4cCI6MzI1MjkyNTMyNCwianRpIjoiZDRjMjRhMDctZDE1MC00NDFmLTg0NTMtYTRkY2MyNTUwZWYzIn0.D88Gtu7ERXjehnLm54GBGc1nrgzjokqCnaqQhUoWEYc
-201 Created
-</code></pre></div><div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"eddf80cc-3bd9-4418-b6a4-dccc9027d2b7"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"token"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"attributes"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="nl">"access_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"eyJhbGciOiJIUzI1NiJ9.eyJ1dWlkIjoiYjMyODNjYmQtYzQzMS00ODU1LWFlZGUtOGNmZWUwYzFjMzNmIiwic3ViIjoiNTUiLCJzY3AiOiJ1c2VyIiwiYXVkIjpudWxsLCJpYXQiOjE2NzUwNzc3MjQsImV4cCI6MzI1MjkyNTMyNCwianRpIjoiZDRjMjRhMDctZDE1MC00NDFmLTg0NTMtYTRkY2MyNTUwZWYzIn0.D88Gtu7ERXjehnLm54GBGc1nrgzjokqCnaqQhUoWEYc"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"token_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bearer"</span><span class="p">,</span><span class="w">
-      </span><span class="nl">"expires_in"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
-    </span><span class="p">}</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="nl">"meta"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"request_id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"8a2c3f7e-3772-4255-b376-02dd1fd822a5"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"git_commit"</span><span class="p">:</span><span class="w"> </span><span class="s2">"7b76d14af1ad08fe9054f001812710db546da7c6"</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">}</span><span class="w">
+</code></pre></div><div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
+  </span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="w">
+</span><span class="p">]</span><span class="w">
 </span></code></pre></div>
       </div>
       <div class="dark-box">
