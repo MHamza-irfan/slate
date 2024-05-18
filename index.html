@@ -323,11 +323,12 @@
 </code></pre></div>
 <p><code>POST /data_peaks/detect/</code></p>
 <h4 id='parameters'>Parameters</h4>
-<p>Content-Disposition: attachment; filename=&quot;data.csv&quot;
-Content-Type: text/csv
-{
-  window_size: 1,
-  threshold: 1
+<p>{
+  @original_filename=&quot;Data points.csv&quot;,
+  @content_type=&quot;text/csv&quot;,
+  @headers=&quot;Content-Disposition: form-data;,
+  &quot;window_size&quot;=&gt;&quot;1&quot;,
+  &quot;threshold&quot;=&gt;&quot;1&quot;
 }</p>
 <h3 id='response'>Response</h3><div class="highlight"><pre class="highlight plaintext tab-plaintext"><code>Content-Type: application/json; charset=utf-8
 </code></pre></div><div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
