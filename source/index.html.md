@@ -27,6 +27,10 @@ POST /data_peaks/detect/
 
 Content-Disposition: attachment; filename="data.csv"
 Content-Type: text/csv
+{
+  window_size: 1,
+  threshold: 1
+}
 
 
 ### Response
