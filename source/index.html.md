@@ -18,10 +18,10 @@ Detecting data peaks in data
 #### Endpoint
 
 ```plaintext
-POST /data_peaks/detect/
+POST labforwardassess-1c95fcb5f8aa.herokuapp.com/data_peaks/detect
 ```
 
-`POST /data_peaks/detect/`
+`POST labforwardassess-1c95fcb5f8aa.herokuapp.com/data_peaks/detect`
 
 #### Parameters
 
